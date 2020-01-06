@@ -47,9 +47,32 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-microsoft-excel-48.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
       <HintPath>\\10.10.10.7\Public-2\Libreria de diseño\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ACTIVEXLib">
+      <HintPath>..\..\VinculacionDePestanas\VinculacionDePestanas\obj\Debug\Interop.ACTIVEXLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Core">
+      <HintPath>..\..\VinculacionDePestanas\VinculacionDePestanas\obj\Debug\Interop.Microsoft.Office.Core.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\VinculacionDePestanas\VinculacionDePestanas\obj\Debug\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.VBIDE">
+      <HintPath>..\..\VinculacionDePestanas\VinculacionDePestanas\obj\Debug\Interop.VBIDE.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.VSTOEE90">
+      <HintPath>..\..\VinculacionDePestanas\VinculacionDePestanas\obj\Debug\Interop.VSTOEE90.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -77,11 +100,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Conexiones.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="Presentacion\FrmInicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Presentacion\FrmInicio.Designer.vb">
+      <DependentUpon>FrmInicio.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -101,8 +124,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\FrmInicio.resx">
+      <DependentUpon>FrmInicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -122,6 +145,21 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microsoft-excel-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-multiply-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-horizontal-line-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-microsoft-excel-48.ico" />
+    <None Include="Resources\icons8-export-csv-28.png" />
+    <None Include="Resources\icons8-submit-progress-28.png" />
+    <None Include="Resources\icons8-attach-28.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
